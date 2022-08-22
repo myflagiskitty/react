@@ -1,0 +1,9 @@
+.btnClick {
+    width: 99px;
+    height: 44px;
+    left: 1098px;
+    top: 262px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    opacity: 0.5;
+    border-radius: 22px;
+}
