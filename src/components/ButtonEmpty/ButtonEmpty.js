@@ -3,9 +3,7 @@ import styles from './buttonEmpty.module.css';
 
 function ButtonEmpty(props) {
     return (
-        <div className={styles.buttonEmpty}>
-            <button className={styles.buttonEmptyText} {...props} >{props.names}</button>
-        </div>
+            <button className={styles.buttonEmpty} {...props}>{props.names}</button>
     );
 };
 

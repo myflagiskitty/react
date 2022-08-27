@@ -1,0 +1,22 @@
+.buttonFilledLonge {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 26.63em;
+    height: 3.65em;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 2em;
+    border: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+.iconArrow {
+    margin-left: 5.5em;
+    margin-right: 0.7em;
+}

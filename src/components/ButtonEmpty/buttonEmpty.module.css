@@ -1,24 +1,30 @@
 .buttonEmpty {
-    width: 99px;
-    height: 44px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.buttonEmptyText {
+    position: relative;
+    width: 7.9em;
+    height: 3.33em;
+    border-radius: 2em;
+    margin: 2px;
+    background: #fff;
+    text-align: center;
+    border: none;
+    color: #bc9cff;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: #BC9CFF;
-    background: #fff;
-    border-radius: 34px;
-    height: 41px;
-    width: 95px;
-    border: none;
-}
+    font-size: 0.75rem;
+    
+  }
+  
+  .buttonEmpty::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 2em;
+    z-index: -1;
+  }
+
+ 

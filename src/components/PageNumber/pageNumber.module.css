@@ -1,0 +1,19 @@
+
+.pageNumber{
+    width: 40px;
+    height: 40px;
+    left: 1020px;
+    top: 571px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: rgba(31, 32, 65, 0.5);
+    justify-content: center;
+    }
+    

@@ -1,0 +1,23 @@
+.buttonFilledRoundGreenArrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.3em;
+    height: 3.3em;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 2em;
+    border: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+
+  /* width: 3em;
+    height: 3em;40px
+    border-radius: 2em;
+    font-size: 0.75rem; */
