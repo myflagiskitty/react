@@ -3,7 +3,7 @@
     width: 7.9em;
     height: 3.33em;
     border-radius: 2em;
-    margin: 2px;
+    margin: 0.125em;
     background: #fff;
     text-align: center;
     border: none;
@@ -18,13 +18,17 @@
   .buttonEmpty::before {
     content: "";
     position: absolute;
-    top: -2px;
-    bottom: -2px;
-    left: -2px;
-    right: -2px;
+    top: -0.125em;
+    bottom: -0.125em;
+    left: -0.125em;
+    right: -0.125em;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 2em;
     z-index: -1;
+  }
+
+  .buttonEmpty:hover{
+    opacity: 0.5;
   }
 
  

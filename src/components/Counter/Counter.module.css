@@ -1,0 +1,46 @@
+.counter_div{
+    display: flex;
+    align-items: center;
+}
+.calculation_btn{
+    width: 30px;
+    height: 30px;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    color: rgba(31, 32, 65, 0.5);
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    border-radius: 50%;
+}
+.count{
+    width: 35px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    color: #1F2041;
+}
+.calculation_decrement{
+    width: 30px;
+    height: 30px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    align-items: center;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    color: rgba(31, 32, 65, 0.5);
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 50%;
+}
+

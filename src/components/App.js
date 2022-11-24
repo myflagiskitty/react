@@ -1,32 +1,41 @@
 import React from "react";
-import ButtonFilled from "./ButtonFiled/ButtonFilled"
-import ButtonEmpty from "./ButtonEmpty/ButtonEmpty";
-import ButtonFilledLonge from "./ButtonFilledLonge/ButtonFilledLonge";
-import ButtonFilledRound from "./ButtonFilledRound/ButtonFilledRound";
-import ButtonFilledRoundGreenArrow from "./ButtonFilledRoundGreenArrow/ButtonFilledRoundGreenArrow";
-import ContainerPagination from "./ContainerPagination/ContainerPagination";
-import PageNumber from "./PageNumber/PageNumber";
 
-function App() {
+import Pagination from "./Pagination/Pagination";
+import PageNumber from "./PageNumber/PageNumber";
+import ContainerButton from "./ContainerButton/ContainerButton";
+import ButtonFilledArrow from "./ButtonFilledArrow/ButtonFilledArrow";
+import InpuEmailt from "./InputEmail/InputEmail";
+import InputEmail from "./InputEmail/InputEmail";
+import InputDropdown from "./InputDropdown/InputDropdown";
+import Counter from "./Counter/Counter";
+
+export default function App() {
+
   return (
     <div>
-      <ButtonFilled names="CLICK ME" />
-      <ButtonEmpty names="CLICK ME" />
-      <ButtonFilledLonge names="ПЕРЕЙТИ К ОПЛАТЕ" />
-      <div>
-        <ContainerPagination>
 
-          <ButtonFilledRound names="1" />
-          <PageNumber>2</PageNumber>
-          <PageNumber>3</PageNumber>
-          <PageNumber>...</PageNumber>
-          <PageNumber>15</PageNumber>
-          <ButtonFilledRoundGreenArrow />
+      <InputDropdown/>
 
-        </ContainerPagination>
-      </div>
+
+
+
+      {/* <ContainerButton/>
+      <ButtonFilledArrow names="ПЕРЕЙТИ К ОПЛАТЕ" /> */}
+
+      {/* <Pagination>
+        <ButtonFilled names="1" />
+        <PageNumber>2</PageNumber>
+        <PageNumber>3</PageNumber>
+        <PageNumber>...</PageNumber>
+        <PageNumber>15</PageNumber>
+        <ButtonFilledArrow />
+      </Pagination> */}
+
+      {/* <InputEmail placeholder="Email"/>
+      <InputEmail placeholder="Пароль"/>
+      <InputEmail placeholder="Имя"/>
+      <InputEmail placeholder="Фамилия"/> */}
     </div>
   );
 };
 
-export default App;
