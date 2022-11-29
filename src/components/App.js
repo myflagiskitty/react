@@ -4,20 +4,18 @@ import Pagination from "./Pagination/Pagination";
 import PageNumber from "./PageNumber/PageNumber";
 import ContainerButton from "./ContainerButton/ContainerButton";
 import ButtonFilledArrow from "./ButtonFilledArrow/ButtonFilledArrow";
-import InpuEmailt from "./InputEmail/InputEmail";
-import InputEmail from "./InputEmail/InputEmail";
+import Input from "./Input/Input";
+import InputDate from "./InputDate/InputDate";
 import InputDropdown from "./InputDropdown/InputDropdown";
 import Counter from "./Counter/Counter";
+import BoxCards from "./BoxCards/BoxCards";
+import HeadersCards from "./HeadersCards/HeadersCards";
+import HeadersCardsThree from "./HeadersCardsThree/HeadersCardsThree";
 
 export default function App() {
 
   return (
     <div>
-
-      <InputDropdown/>
-
-
-
 
       {/* <ContainerButton/>
       <ButtonFilledArrow names="ПЕРЕЙТИ К ОПЛАТЕ" /> */}
@@ -31,10 +29,21 @@ export default function App() {
         <ButtonFilledArrow />
       </Pagination> */}
 
-      {/* <InputEmail placeholder="Email"/>
-      <InputEmail placeholder="Пароль"/>
-      <InputEmail placeholder="Имя"/>
-      <InputEmail placeholder="Фамилия"/> */}
+      <Input placeholder="Email" name="" type="email" />
+      
+      <Input placeholder="Пароль" type="password"/>
+      <Input placeholder="Имя" type="text"/>
+      <Input placeholder="Фамилия" type="text"/>
+      <InputDropdown/>
+      <InputDate placeholder="дд.мм.гггг" type="date"/>
+
+      <HeadersCards name="Найдём номера под ваши пожелания"/>
+
+      
+
+      <BoxCards/>
+      {/* <HeadersCardsThree name="прибытие"/> */}
+
     </div>
   );
 };

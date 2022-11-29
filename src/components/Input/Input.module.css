@@ -1,5 +1,5 @@
 /* ширина экрана 1280 */
-.input_email {
+.input {
     box-sizing: border-box;
 
     width: 320px;
@@ -14,14 +14,16 @@
     font-size: 14px;
     line-height: 18px;
     padding: 13px 15px;
+
+    color: rgba(31, 32, 65, 0.75);
     
 }
-.input_email::-webkit-input-placeholder { color: rgba(31, 32, 65, 0.25); }
-.input_email::-moz-placeholder { color: rgba(31, 32, 65, 0.25); }
+.input::-webkit-input-placeholder { color: rgba(31, 32, 65, 0.25); }
+.input::-moz-placeholder { color: rgba(31, 32, 65, 0.25); }
 
 
-.input_email[type=text]:hover,
-.input_email[type=text]:focus {
+.input:hover,
+.input:focus {
 
     outline: none;
     border: 1px solid rgba(31, 32, 65, 0.5);

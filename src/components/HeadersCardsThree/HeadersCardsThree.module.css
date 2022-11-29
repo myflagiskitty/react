@@ -1,0 +1,20 @@
+.headers_cards_three {
+    position: absolute;
+    width: 83px;
+    height: 15px;
+    left: 170px;
+    top: 270px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    /* Dark 100% */
+
+    color: #1F2041;
+}

@@ -16,6 +16,10 @@
     padding-left: 15px;
     text-align: start;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
 }
 
 .dropdown_btn_open {
@@ -35,6 +39,10 @@
     color: rgba(31, 32, 65, 0.75);
     padding-left: 15px;
     text-align: start;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .dropdown_div {
@@ -59,7 +67,7 @@
 }
 
 .expand_more {
-    padding-left: 165px;
+    padding-right: 7px;
 }
 
 .dropdown_row {
@@ -69,8 +77,16 @@
     justify-content: space-between;
 }
 
+/* -------------------------------- */
+
 .btn_add_or_clear {
     display: flex;
     padding: 20px 7px 0 0;
     justify-content: space-between;
 } 
+
+.btn_add {
+    display: flex;
+    padding: 20px 7px 0 0;
+    justify-content: flex-end;
+}

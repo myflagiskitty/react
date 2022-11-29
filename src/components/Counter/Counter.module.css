@@ -1,7 +1,17 @@
+.counter_row{
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    justify-content: space-between;
+}
+
 .counter_div{
     display: flex;
     align-items: center;
 }
+
+
 .calculation_btn{
     width: 30px;
     height: 30px;

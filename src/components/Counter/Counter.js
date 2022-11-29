@@ -1,41 +1,23 @@
-
 import React, { useState } from 'react';
 import styles from './Counter.module.css';
 
-export default function Counter () {
-    const [count, setCount] = useState(0)
+export default function Counter(props) {
 
-    function increment() {
 
-        if(count <= 9){
-            setCount(count + 1);
-            
-        }
-        else{
-            setCount(count);
-        }
-    }
-
-    function decrement() {
-        if(count >= 1){
-            setCount(count - 1);
-        }
-        else{
-            setCount(count);
-        }
-    }
 
     return (
-        <div className={styles.counter_div}>
+        <div className={styles.counter_row}>
+            <div>{props.header}</div>
 
-            <button onClick={decrement} 
-                    className={count > 0 ? styles.calculation_btn : styles.calculation_decrement}>-</button>
+            <div className={styles.counter_div}>
+                <button onClick={props.decrement}
+                    className={props.value > 0 ? styles.calculation_btn : styles.calculation_decrement}>-</button>
 
-            <div className={styles.count}>{count}</div>
+                <div className={styles.count}>{props.value}</div>
 
-            
-            <button onClick={increment} 
+                <button onClick={props.increment}
                     className={styles.calculation_btn}>+</button>
+            </div>
         </div>
     )
 };
