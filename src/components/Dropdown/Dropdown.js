@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import styles from './InputDropdown.module.css';
+import styles from './Dropdown.module.css';
 import icon from "./expand_more.svg";
 import Counter from "../Counter/Counter";
-import ButtonClear from "../ButtonClear/ButtonClear";
-import ButtonApply from "../ButtonApply/ButtonApply";
+import ButtonClearOrApply from "../ButtonClearOrApply/ButtonClearOrApply";
 
-
-export default function InputDropdown(props) {
+export default function Dropdown(props) {
 
     const [value, setValue] = useState(false);
     const [grownup, setGrownup] = useState(0);//значение щетчика для взрослых
@@ -22,7 +20,6 @@ export default function InputDropdown(props) {
         sumGuests = 10;
     }
 
-
     function ClearCounter(sumGuests) {
         if (sumGuests > 0) {
             return sumGuests === 0;
@@ -33,45 +30,41 @@ export default function InputDropdown(props) {
         <div className={styles.input_dropdown}>
             <h3 className={styles.header}>{props.header}</h3>
             <button onClick={Сhange} className={value ? styles.dropdown_btn_open : styles.dropdown_btn}>
-
                 {sumGuests === 0 ? 'Сколько гостей' : sumGuests + " " + ChangeWordEndings(sumGuests)}
-
                 <img className={styles.expand_more} src={icon} alt="иконка" />
             </button>
             {
                 value ?
                     <div className={styles.dropdown_div}>
-
                         <div className={styles.dropdown_row}>
                             <Counter header='Взрослые'
-                                value={grownup}
-                                increment={() => sumGuests <= 9 ? setGrownup(grownup + 1) : setGrownup(grownup)}
-                                decrement={() => grownup >= 1 ? setGrownup(grownup - 1) : setGrownup(grownup)}
+                                     value={grownup}
+                                     increment={() => sumGuests <= 9 ? setGrownup(grownup + 1) : setGrownup(grownup)}
+                                     decrement={() => grownup >= 1 ? setGrownup(grownup - 1) : setGrownup(grownup)}
                             />
                         </div>
-
                         <div className={styles.dropdown_row}>
                             <Counter header='Дети'
-                                value={children}
-                                increment={() => sumGuests <= 9 ? setChildren(children + 1) : setChildren(children)}
-                                decrement={() => children >= 1 ? setChildren(children - 1) : setChildren(children)}
+                                     value={children}
+                                     increment={() => sumGuests <= 9 ? setChildren(children + 1) : setChildren(children)}
+                                     decrement={() => children >= 1 ? setChildren(children - 1) : setChildren(children)}
                             />
                         </div>
-
                         <div className={styles.dropdown_row}>
                             <Counter header='Младенцы'
-                                value={baby}
-                                increment={() => sumGuests <= 9 ? setBaby(baby + 1) : setBaby(baby)}
-                                decrement={() => baby >= 1 ? setBaby(baby - 1) : setBaby(baby)}
+                                     value={baby}
+                                     increment={() => sumGuests <= 9 ? setBaby(baby + 1) : setBaby(baby)}
+                                     decrement={() => baby >= 1 ? setBaby(baby - 1) : setBaby(baby)}
                             />
                         </div>
-
                         <div className={sumGuests > 0 ? styles.btn_add_or_clear : styles.btn_add}>
                             {/* не знаю как очистить значение каунтера по клику на кнопку */}
-                            {sumGuests > 0 ? <ButtonClear onClick={ClearCounter(sumGuests)} /> : null}
-                            <ButtonApply onClick="" />
+                            {sumGuests > 0 ? <ButtonClearOrApply onClick={ClearCounter(sumGuests)}
+                                                                 name="очистить" /> : null}
+                            <ButtonClearOrApply onClick=""
+                                                name="применить"
+                            />
                         </div>
-
                     </div>
                     :
                     null
@@ -80,7 +73,6 @@ export default function InputDropdown(props) {
     );
 
 };
-
 
 function ChangeWordEndings(sumGuests) {
     if (sumGuests === 1) {

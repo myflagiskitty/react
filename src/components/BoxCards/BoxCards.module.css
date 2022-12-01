@@ -1,14 +1,7 @@
 .box_cards {
     box-sizing: border-box;
-
-    position: absolute;
-    left: 140px;
-    top: 150px;
-
     width: 380px;
     height: 374px;
-
-
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);

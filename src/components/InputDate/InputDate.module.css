@@ -1,18 +1,15 @@
 .input_date {
     box-sizing: border-box;
-
     width: 320px;
     height: 44px;
     background: #FFFFFF;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-
     color: rgba(31, 32, 65, 0.25);
     padding: 13px 15px;
     text-transform: uppercase;
@@ -24,12 +21,9 @@
 
 .input_date[type="date"]::-webkit-calendar-picker-indicator {opacity: 0;}
 
-/*  */
 .input_date:hover,
 .input_date:focus {
-
     outline: none;
     border: 1px solid rgba(31, 32, 65, 0.5);
     color: rgba(31, 32, 65, 0.75);
-
 }

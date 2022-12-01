@@ -1,22 +1,10 @@
 import React from "react";
-//import React,{Component} from "react";//если мы хотим написать классом
 import styles from './buttonEmpty.module.css';
 
-// export default class ButtonEmpty extends Component{
-//     render() {
-//         return(
-//             <button className={styles.buttonEmpty} {...props}>{props.names}</button>
-//         )
-
-//     }
-// }
-
-
 export default function ButtonEmpty(props) {
-    return (
-            <button className={styles.buttonEmpty} {...props}>{props.names}</button>
-    );
-};
 
+    return <button className={styles.buttonEmpty}>{props.name}</button>
+};
+// при нажатии не правельно отображается
 
 
