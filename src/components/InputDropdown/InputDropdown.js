@@ -6,7 +6,7 @@ import ButtonClear from "../ButtonClear/ButtonClear";
 import ButtonApply from "../ButtonApply/ButtonApply";
 
 
-export default function InputDropdown() {
+export default function InputDropdown(props) {
 
     const [value, setValue] = useState(false);
     const [grownup, setGrownup] = useState(0);//значение щетчика для взрослых
@@ -30,7 +30,8 @@ export default function InputDropdown() {
     }
 
     return (
-        <div>
+        <div className={styles.input_dropdown}>
+            <h3 className={styles.header}>{props.header}</h3>
             <button onClick={Сhange} className={value ? styles.dropdown_btn_open : styles.dropdown_btn}>
 
                 {sumGuests === 0 ? 'Сколько гостей' : sumGuests + " " + ChangeWordEndings(sumGuests)}

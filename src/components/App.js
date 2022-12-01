@@ -10,15 +10,17 @@ import InputDropdown from "./InputDropdown/InputDropdown";
 import Counter from "./Counter/Counter";
 import BoxCards from "./BoxCards/BoxCards";
 import HeadersCards from "./HeadersCards/HeadersCards";
-import HeadersCardsThree from "./HeadersCardsThree/HeadersCardsThree";
+import Calendar from "./Calendar/Calendar";
+
+import InputArrivalAndDeparture from "./InputArrivalAndDeparture/InputArrivalAndDeparture";
 
 export default function App() {
 
   return (
     <div>
 
-      {/* <ContainerButton/>
-      <ButtonFilledArrow names="ПЕРЕЙТИ К ОПЛАТЕ" /> */}
+      {/* <ContainerButton/> */}
+      <ButtonFilledArrow names="ПЕРЕЙТИ К ОПЛАТЕ" />
 
       {/* <Pagination>
         <ButtonFilled names="1" />
@@ -35,14 +37,15 @@ export default function App() {
       <Input placeholder="Имя" type="text"/>
       <Input placeholder="Фамилия" type="text"/>
       <InputDropdown/>
-      <InputDate placeholder="дд.мм.гггг" type="date"/>
+      {/* просто переделать на обычный */}<InputDate placeholder="дд.мм.гггг" type="date"/>
 
       <HeadersCards name="Найдём номера под ваши пожелания"/>
 
       
 
       <BoxCards/>
-      {/* <HeadersCardsThree name="прибытие"/> */}
+      <InputArrivalAndDeparture/>
+      <Calendar/>
 
     </div>
   );

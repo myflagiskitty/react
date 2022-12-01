@@ -7,10 +7,15 @@
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 2em;
     border: none;
+
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 0.75rem;
+
+    /* line-height: 15px; */
+    text-transform: uppercase;
+
     text-align: center;
     color: #FFFFFF;
 
@@ -21,8 +26,8 @@
     margin-right: 0.7em;
 }
 
-/* зеленый круг со стрелочкой */
-.buttonFilledRoundGreenArrow{
+
+.buttonFilledRoundGreenArrow{            /* зеленый круг со стрелочкой */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,4 +42,7 @@
     font-size: 0.75rem;
     text-align: center;
     color: #FFFFFF;
+}
+.button_filled_arrow{
+    padding: 0 30px;
 }
