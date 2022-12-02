@@ -6,6 +6,7 @@
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    position: relative;
 }
 
 .box_row{
@@ -13,4 +14,15 @@
     flex-direction: row;
     padding: 21px 30px 0;
     justify-content: space-between;
+}
+
+.fix_btn{
+    position: absolute;
+    top: 300px;
+    z-index: 0;
+}
+
+.fix{
+    position: absolute;
+    z-index: 5;
 }

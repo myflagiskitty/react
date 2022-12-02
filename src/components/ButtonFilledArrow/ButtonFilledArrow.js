@@ -6,7 +6,8 @@ export default function ButtonFilledArrow(props) {
 
     return (
         <div className={styles.button_filled_arrow}>
-            <button  className={props.name !== "" ? styles.buttonFilledLonge : styles.buttonFilledRoundGreenArrow}>
+            <button onClick={props.pickUpNumbers} 
+                    className={props.name !== "" ? styles.buttonFilledLonge : styles.buttonFilledRoundGreenArrow}>
                 {props.name !== "" ? props.name : null}
                 <img className={props.name !== "" ? styles.iconArrow : null}
                     src={icon}
@@ -15,4 +16,4 @@ export default function ButtonFilledArrow(props) {
         </div>
     )
 };
-//не получается вставить null вместо "" ...не работает так и заглавный стиль тоже не работает(
+//не получается вставить null вместо "" ...не работает 

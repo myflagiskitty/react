@@ -35,3 +35,14 @@
     color: #1F2041;
     margin: 5px 0;
 }
+
+.e{
+    position: absolute;
+    top: 144px;
+    left: 145px;
+    right: 7px;
+    width: 34px;
+    height: 44px;
+    border: none;
+    background: #ffffff00;
+}

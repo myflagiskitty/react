@@ -16,15 +16,25 @@ export default function Dropdown(props) {
     }
 
     let sumGuests = grownup + children + baby;
+    
     if (sumGuests > 10) {
         sumGuests = 10;
     }
 
-    function ClearCounter(sumGuests) {
+    function ClearCounter() {
         if (sumGuests > 0) {
-            return sumGuests === 0;
+            setGrownup(0);
+            setChildren(0);
+            setBaby(0); 
         }
     }
+
+    function ApplyCounter(){
+        // здесь будет функция по "применению" изменений 
+        // их надо куда-то отправить только пока не ясно куда    
+    }
+
+
 
     return (
         <div className={styles.input_dropdown}>
@@ -58,10 +68,10 @@ export default function Dropdown(props) {
                             />
                         </div>
                         <div className={sumGuests > 0 ? styles.btn_add_or_clear : styles.btn_add}>
-                            {/* не знаю как очистить значение каунтера по клику на кнопку */}
-                            {sumGuests > 0 ? <ButtonClearOrApply onClick={ClearCounter(sumGuests)}
+
+                            {sumGuests > 0 ? <ButtonClearOrApply clearOrApply={ClearCounter}
                                                                  name="очистить" /> : null}
-                            <ButtonClearOrApply onClick=""
+                            <ButtonClearOrApply onclearOrApply="ApplyCounter"
                                                 name="применить"
                             />
                         </div>
