@@ -9,11 +9,16 @@ export default function InputArrivalAndDeparture(props) {
             <h3 className={styles.header}>{props.header}</h3>
 
             <input type={props.type}
-                value={props.value}
+                value={props.value}               
                 id="fname"
                 name={props.name}
                 placeholder={props.placeholder}
                 className={styles.input_arrival_and_departure}
+// все что ниже я не знаю для чего?
+                size={props.size}
+                step={props.step} 
+                min={props.min}
+                max={props.max}
             />
             <button className={styles.e} onClick={props.showCalendar}>
             <img  src={icon} alt="иконка" />

@@ -1,16 +1,18 @@
 import React from "react";
 
-import Calendar from "./Calendar/Calendar";
-import BoxCards from "./BoxCards/BoxCards";
+import Dropdown from "./Dropdown/Dropdown";
 import DropdownWithouBtn from "./DropdownWithouBtn/DropdownWithouBtn";
+import NewDropdown from "./NewDropdown/NewDropdown";
 
 export default function App() {
 
   return (
     <div>
-      {/* <Calendar />*/}
-      <BoxCards />
-      {/* <DropdownWithouBtn/> */}
+    
+      {/* <Dropdown/>
+      <DropdownWithouBtn/> */}
+      <NewDropdown/>
+      
     </div>
   );
 };

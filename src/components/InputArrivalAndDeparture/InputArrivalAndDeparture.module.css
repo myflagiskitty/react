@@ -24,7 +24,16 @@
 .input_arrival_and_departure::-webkit-calendar-picker-indicator {
     opacity: 0;
 }
+input_arrival_and_departure::-webkit-outer-spin-button,
+input_arrival_and_departure::-webkit-inner-spin-button{
+    display: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
 
+
+
+/* --------------------------------------------------------- */
 .header {
     font-family: 'Montserrat';
     font-style: normal;

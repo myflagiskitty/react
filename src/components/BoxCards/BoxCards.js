@@ -29,11 +29,16 @@ export default function BoxCards() {
                 <InputArrivalAndDeparture showCalendar={ArrivalDay} 
                                           type="number" 
                                           header="прибытие" 
+                                // все что ниже я не знаю для чего?
+                                          size="4"
+                                          step="1" 
+                                          min="1" 
+                                          max="27"
                 />
-                <InputArrivalAndDeparture showCalendar={DepartureDay}
+                {/* <InputArrivalAndDeparture showCalendar={DepartureDay}
                                           type="number" 
                                           header="выезд" 
-                />
+                /> */}
             </form>
             <div className={styles.fix}>
                 <Dropdown header="гости" />
