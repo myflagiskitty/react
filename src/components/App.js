@@ -1,19 +1,17 @@
 import React from "react";
-
-// import Dropdown from "./Dropdown/Dropdown";
-//import DropdownWithouBtn from "./DropdownWithouBtn/DropdownWithouBtn";
 import NewDropdown from "./NewDropdown/NewDropdown";
-import StarRating from "./StarRating/StarRating";
+import DropdownWithouBtn from "./DropdownWithouBtn/DropdownWithouBtn";
+
 export default function App() {
 
   return (
     <div>
-    
+
       {/* <Dropdown/>
-     <DropdownWithouBtn/> 
-      <NewDropdown/>*/}
-      
-<StarRating/>
+      <DropdownWithouBtn />
+      */}
+     
+      <NewDropdown />
     </div>
   );
 };
