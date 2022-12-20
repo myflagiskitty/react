@@ -1,28 +1,25 @@
 import React from 'react';
 import styles from './InputArrivalAndDeparture.module.css';
-import icon from "./expand_more.svg";
 
 export default function InputArrivalAndDeparture(props) {
 
-    return (
-        <div>
-            <h3 className={styles.header}>{props.header}</h3>
+  return (
+    <div>
+      <h3 className={styles.header}>{props.header}</h3>
+      
+      <input className={styles.input_arrival_and_departure}
+        type={props.type}
+        step={props.step}
+        id="fname"
+        name={props.name}
+        value={props.value}
+        placeholder="ДД.ММ.ГГГГ"
+        onChange={props.onChange}
+      />
+      {/*  */}
 
-            <input type={props.type}
-                value={props.value}               
-                id="fname"
-                name={props.name}
-                placeholder={props.placeholder}
-                className={styles.input_arrival_and_departure}
-// все что ниже я не знаю для чего?
-                size={props.size}
-                step={props.step} 
-                min={props.min}
-                max={props.max}
-            />
-            <button className={styles.e} onClick={props.showCalendar}>
-            <img  src={icon} alt="иконка" />
-            </button>
-        </div>
-    );
+      <button className={styles.button} onClick={props.showCalendar}>expand_more</button>
+      
+    </div>
+  );
 };

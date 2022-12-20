@@ -6,7 +6,7 @@ const render = {
     count2: 0,
     count3: 0,
 };
-//React.memo() обворачиваем функцию для разделенного рендора
+//React.memo() обворачиваем функцию для разделенного рендора работает совместно с useCallback
 export default React.memo(function Counter(props) {
     console.warn(`🎈 Counter ${props.header} render: ${++render[`count${props.id}`]}`);
 
@@ -28,5 +28,5 @@ export default React.memo(function Counter(props) {
 
         </div>
     )
-});
+}); 
 

@@ -21,54 +21,16 @@ export default function NewDropdown(props) {
   if (sumGuests > 10) {
     sumGuests = 10;
   }
-  // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  const Increment = useCallback(() => {
-    if (sumGuests <= 9) {
-      setGrownup(x => x + 1)
-    }
-  }, [sumGuests]);
 
-  const Decrement = useCallback(() => {
-    if (count1 >= 1) {
-      setGrownup(x => x - 1)
-    }
-  }, [sumGuests]);
-  // --------------------------------------
-  const Increment2 = useCallback(() => {
-    if (sumGuests <= 9) {
-      setChildren(x => x + 1)
-    }
-  }, [sumGuests]);
-
-  const Decrement2 = useCallback(() => {
-    if (count2 >= 1) {
-      setChildren(x => x - 1)
-    }
-  }, [sumGuests]);
-  // --------------------------------------
-  const Increment3 = useCallback(() => {
-    if (sumGuests <= 9) {
-      setBaby(x => x + 1)
-    }
-  }, [sumGuests]);
-
-  const Decrement3 = useCallback(() => {
-    if (count3 >= 1) {
-      setBaby(x => x - 1)
-    }
-  }, [sumGuests]);
-  // --------------------------------------
   const ClearCounter = useCallback(() => {
-    if (sumGuests > 0) {
-      setGrownup(0);
-      setChildren(0);
-      setBaby(0);
-    }
-  }, [sumGuests]);
+    setGrownup(0);
+    setChildren(0);
+    setBaby(0);
+  }, []);
 
   const ApplyCounter = useCallback(() => {
-        setValue(!value);//то сворачиваем этот дропдаун    
-  }, [value]);
+    setValue(x => !x);//то сворачиваем этот дропдаун    
+  }, []);
 
   return (
     <div className={styles.input_dropdown}>
@@ -85,30 +47,31 @@ export default function NewDropdown(props) {
 
             <Counter header='Взрослые'
               value={count1}
-              increment={Increment}
-              decrement={Decrement}
+              increment={() => sumGuests <= 9 ? setGrownup(count1 + 1) : setGrownup(count1)}
+              decrement={() => count1 >= 1 ? setGrownup(count1 - 1) : setGrownup(count1)}
               id={1}
             />
 
             <Counter header='Дети'
               value={count2}
-              increment={Increment2}
-              decrement={Decrement2}
+              increment={() => sumGuests <= 9 ? setChildren(count2 + 1) : setChildren(count2)}
+              decrement={() => count2 >= 1 ? setChildren(count2 - 1) : setChildren(count2)}
               id={2}
             />
 
             <Counter header='Младенцы'
               value={count3}
-              increment={Increment3}
-              decrement={Decrement3}
+              increment={() => sumGuests <= 9 ? setBaby(count3 + 1) : setBaby(count3)}
+              decrement={() => count3 >= 1 ? setBaby(count3 - 1) : setBaby(count3)}
               id={3}
             />
 
             <div className={sumGuests > 0 ? styles.btn_add_or_clear : styles.btn_add}>
 
               {sumGuests > 0 ? <ButtonClearOrApply clearOrApply={ClearCounter} name="очистить" /> : null}
+
               <ButtonClearOrApply clearOrApply={ApplyCounter} name="применить" />
-                
+
             </div>
 
           </div>
