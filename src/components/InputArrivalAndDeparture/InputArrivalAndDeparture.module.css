@@ -27,18 +27,18 @@
 }
 
 /* ----------------------убираем стрелочки----------------------------------- */
-.input_arrival_and_departure::-webkit-outer-spin-button,
-.input_arrival_and_departure::-webkit-inner-spin-button {
+/* .input_arrival_and_departure::-webkit-outer-spin-button,
+.input_arrival_and_departure::-webkit-inner-spin-button { */
   /* display: none; <- Сбой Chrome при наведении курсора */
-  -webkit-appearance: none;
-  margin: 0;
-  /* <-- По-видимому, какой-то запас все еще есть, хотя он и скрыт */
-}
+  /* -webkit-appearance: none;/ */
+  /* margin: 0; */
+  /* <-- По-видимому, какой-то запас все еще есть, хотя он и скрыт }*/
 
-.input_arrival_and_departure[type=number] {
+
+/*.input_arrival_and_departure[type=text] {
   -moz-appearance: textfield;
-  /* Firefox */
-}
+   Firefox 
+}*/
 
 
 /* --------------------------------------------------------- */
