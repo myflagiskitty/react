@@ -132,11 +132,11 @@
 .halfLeft {
     display: flex;
     justify-content: center;
-    background: linear-gradient(to right, #ffffff 20%, #e5e8fe);
+    background: linear-gradient(to right, #ffffff 50%, #e5e8fe 50%);
 }
 
 .halfRight {
     display: flex;
     justify-content: center;
-    background: linear-gradient(to right, #e5e8fe, #ffffff 80%);
+    background: linear-gradient(to right, #e5e8fe 50%, #ffffff 50%);
 }

@@ -5,21 +5,36 @@
   background: none;
 }
 
+.star_filed {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 20px;
+
+  -webkit-text-fill-color: transparent;
+  
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border: none;
+  width: 30px;
+  background-clip: text;
+
+  -webkit-text-stroke-color: #a3a0fc;
+  -webkit-text-stroke-width: 2px;
+}
+
 .star_border {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 20px;
-  /* display: flex; */
-  /* align-items: center; */
-  text-align: center;
 
-  /* background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); */
-  /* background-clip: text; */
-background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  -webkit-text-stroke-color: #a3a0fc;
+  -webkit-text-stroke-width: 2px;
+
+  border: none;
+  background: inherit;
+  width: 30px;
 }
