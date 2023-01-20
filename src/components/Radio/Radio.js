@@ -5,18 +5,25 @@ export default function Radio(props) {
 
   return (
     <div>
-      <label className={styles.switch}>
-        
-      <input type="radio" value="man" checked name="gender" />Мужчина
-      <span className={styles.slider}></span>
-      <input type="radio" value="woman" name="gender" />Женщина
-      <span className={styles.slider}></span>
-      </label>
+
+      <div className={styles.customRadio}>
+        <label>
+          <input type="radio" name="radio" checked/>
+          <div className={styles.customRadio__label}>
+            <span >{props.header1}</span>
+          </div>
+        </label>
+      </div>
+
+      <div className={styles.customRadio}>
+        <label>
+          <input type="radio" name="radio"/>
+          <div className={styles.customRadio__label} >
+            <span >{props.header2}</span>
+          </div>
+        </label>
+      </div>
+
     </div>
   )
 };
-{/* 
-        <input type="checkbox" />
-        
-      </label>
-      <div className={styles.header}>{props.header}</div> */}

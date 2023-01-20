@@ -11,19 +11,20 @@
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
   padding: 0 0 0px 10px;
-  
 }
 
 .switch {/*серая рамка*/ 
-  position: relative;
   display: inline-block;
+  cursor: pointer; 
+  position: relative;
   width: 40px;
   height: 20px;
-  cursor: pointer; 
+  padding-left: 0px;
 }
 
 .slider {/* серая рамка */ 
   position: absolute;
+  width: 38px;
   top: 0;
   left: 0;
   right: 0;
@@ -33,27 +34,23 @@
   border-radius: 10px;
  -webkit-transition: .4s;
   transition: .4s;
-  width: 38px;
 }
 
 input:checked+.slider {/*цветная рамка*/ 
-  width: 38px;
   height: 18px;
-  background: #FFFFFF;
   border: 1px solid #BC9CFF;
-  border-radius: 10px;
 }
 
 .slider:before {/*cерый кружок */ 
   content: "";
   position: absolute;
+  width: 12px;
   top: 3px;
   right: 4px;
   left: 4px;
   bottom: 4px;
   border-radius: 50%;
   height: 12px;
-  width: 12px;
   background: rgba(31, 32, 65, 0.25);
   -webkit-transition: .4s;
   transition: .4s;

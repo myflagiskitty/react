@@ -1,55 +1,69 @@
-.switch {
-  /*серая рамка*/
+label {
+  float: left;/* элемент должен плавать слева от содержащего его блока */
+  padding-left: 20px;
+}
+
+.customRadio [type="radio"]:checked,
+.customRadio [type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.customRadio [type="radio"]:not(:checked)+.customRadio__label,
+.customRadio [type="radio"]:checked+.customRadio__label{
   position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 20px;
+  padding: 0px 0px 0px 30px;
   cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  margin-bottom: 4px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
 }
-.slider {
-  /* серая рамка */
+.customRadio [type="radio"]:not(:checked)+.customRadio__label{color: rgba(31, 32, 65, 0.5);}
+.customRadio [type="radio"]:checked+.customRadio__label{color: rgba(31, 32, 65, 0.75);}
+
+/* рамка серая*/
+.customRadio [type="radio"]:not(:checked)+.customRadio__label:before,
+ .customRadio [type="radio"]:checked+.customRadio__label:before{
+  content: '';
   position: absolute;
-  top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: #ffffff;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 10px;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked+.slider {
-  /*цветная рамка*/
-  width: 38px;
+  top: 0;
+  width: 18px;
   height: 18px;
-  background: #FFFFFF;
-  border: 1px solid #BC9CFF;
-  border-radius: 10px;
+  border-radius: 100%;
+  background: #fff;
 }
+.customRadio [type="radio"]:not(:checked)+.customRadio__label:before{ border: 1px solid rgba(31, 32, 65, 0.25);}
+.customRadio [type="radio"]:checked+.customRadio__label:before{border: 1px solid #BC9CFF;}
 
-.slider:before {
-  /*cерый кружок */
-  content: "";
-  position: absolute;
-  top: 3px;
-  right: 4px;
-  left: 4px;
-  bottom: 4px;
-  border-radius: 50%;
-  height: 12px;
+/* фигма серединка*/
+.customRadio [type="radio"]:checked+.customRadio__label:after,
+.customRadio [type="radio"]:not(:checked)+.customRadio__label:after { 
+  content: ''; 
   width: 12px;
-  background: rgba(31, 32, 65, 0.25);
-  -webkit-transition: .4s;
-  transition: .4s;
+  height: 12px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
 }
 
-input:checked+.slider:before {
-  -webkit-transform: translateX(19px);
-  -ms-transform: translateX(19px);
-  transform: translateX(19px);
-  /* на какую длину уходит в сторону */
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  /* сиренивый круг */
+.customRadio [type="radio"]:not(:checked)+.customRadio__label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.customRadio [type="radio"]:checked+.customRadio__label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }

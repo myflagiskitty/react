@@ -7,13 +7,16 @@ export default function InputArrivalAndDeparture(props) {
     <div>
       <h3 className={styles.header}>{props.header}</h3>
 
-      <input className={styles.input_arrival_and_departure}
-        type={props.type}
-        onInput={props.onInput}
-        defaultValue="ДД.ММ.ГГГГ"
+      <input placeholder={props.placeholder}
+             type={props.type}
+             value={props.value}
+             name={props.name}
+             className={styles.input_date}
+             onInput={props.onInput}
       />
   
       <button className={styles.button} onClick={props.showCalendar}>expand_more</button>
     </div>
   );
 };
+

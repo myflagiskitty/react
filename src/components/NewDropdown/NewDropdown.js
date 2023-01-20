@@ -1,7 +1,6 @@
 
 import React, { useState, useCallback } from 'react';
 import styles from './NewDropdown.module.css';
-import icon from "./expand_more.svg";// вместо иконки стить шрифта на весь инпут и он же кнопка
 import Counter from "../Counter/Counter";
 import ButtonClearOrApply from "../ButtonClearOrApply/ButtonClearOrApply";//как решить куда их добавить а куда нет?
 
@@ -38,7 +37,7 @@ export default function NewDropdown(props) {
 
       <button onClick={Сhange} className={value ? styles.dropdown_btn_open : styles.dropdown_btn}>
         {sumGuests === 0 ? 'Сколько гостей' : sumGuests + " " + ChangeWordEndings(sumGuests)}
-        <img className={styles.expand_more} src={icon} alt="иконка" />
+        <span className={styles.expand_more}>expand_more</span>
 
       </button>
       {
@@ -71,7 +70,7 @@ export default function NewDropdown(props) {
               {sumGuests > 0 ? <ButtonClearOrApply clearOrApply={ClearCounter} name="очистить" /> : null}
 
               <ButtonClearOrApply clearOrApply={ApplyCounter} name="применить" />
-
+              
             </div>
 
           </div>
