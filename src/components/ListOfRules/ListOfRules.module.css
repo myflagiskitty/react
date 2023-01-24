@@ -1,0 +1,39 @@
+.header {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+  margin-bottom: 9px;
+  padding-left: 18px;
+}
+
+.description {
+  display: block;
+  width: 243px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  list-style: none;
+  margin-top: 0;
+}
+
+li {
+  margin-bottom: 7px;
+}
+
+ .description li::before {
+  content: "\25CF";
+  color: rgba(31, 32, 65, 0.25);
+  font-size: 22px;
+  display: inline-block;
+  width: 0px;
+  position: relative;
+  left: -23px;
+  top: 2px;
+ }

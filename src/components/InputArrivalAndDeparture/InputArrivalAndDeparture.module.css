@@ -31,6 +31,7 @@
   font-size: 14px;
   color: rgba(31, 32, 65, 0.75);
   padding: 13px 23px 13px 15px;
+  margin-right: 20px;
 }
 
 .button {
@@ -47,6 +48,11 @@
   align-items: center;
   text-align: center;
   color: rgba(31, 32, 65, 0.5);
+}
+.button:active,
+.button:hover,
+.button:focus {
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .header {

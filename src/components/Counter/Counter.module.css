@@ -1,16 +1,17 @@
-.counter_row{
+.counter_row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 7px 7px 0 0;
+    width: 100%;
 }
 
-.counter_div{
+.counter_div {
     display: flex;
     align-items: center;
 }
 
-.calculation_btn{
+.calculation_btn {
     width: 30px;
     height: 30px;
     font-family: 'Montserrat';
@@ -27,7 +28,7 @@
 }
 
 
-.count{
+.count {
     width: 35px;
     font-family: 'Montserrat';
     font-style: normal;
@@ -37,7 +38,7 @@
     color: #1F2041;
 }
 
-.calculation_decrement{
+.calculation_decrement {
     width: 30px;
     height: 30px;
     font-family: 'Montserrat';
@@ -52,4 +53,3 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 50%;
 }
-

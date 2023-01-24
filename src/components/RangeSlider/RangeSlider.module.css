@@ -1,0 +1,115 @@
+.header {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+}
+
+.range {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.5);
+  padding-left: 43px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.slider {
+  box-sizing: border-box;
+  position: relative;
+  width: 266px;
+  height: 6px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 3px;
+}
+/* --------------------------------------------------------------------------------- */
+.polzunok_container_5 * {
+  box-sizing: border-box;
+  outline: none;
+}
+
+.polzunok_container_5 {
+  padding: 10px 16px;
+  margin: 30px;
+}
+
+.polzunok_container_5:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.polzunok_container_5 .ui_slider {
+  position: relative;
+  background: #BFE2FF;
+  height: 10px;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), 1px 1px 5px rgba(255, 255, 255, 1);
+}
+
+.polzunok_container_5 .ui_slider .ui_slider_handle {
+  position: absolute;
+  margin-left: -16px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 4px solid #BFE2FF;
+  top: -11px;
+  background: #FFF;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, border 0.4s;
+}
+
+.polzunok_container_5 .ui_slider .ui_slider_handle:hover,
+.polzunok_container_5 .ui_slider .ui_slider_handle:focus {
+  transform: scale(1.2);
+  border: 4px solid #337AB7;
+}
+
+.polzunok_input_5_left,
+.polzunok_input_5_right {
+  height: 32px;
+  background: #FFF;
+  border-radius: 28px;
+  border: 4px solid #BFE2FF;
+  text-align: center;
+  font-size: 18px;
+  padding: 16px;
+  width: 140px;
+  margin-top: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.polzunok_input_5_left {
+  float: left;
+}
+
+.polzunok_input_5_right {
+  float: right;
+}
+
+.polzunok_container_5 .ui_slider .ui_slider_range {
+  position: absolute;
+  z-index: 1;
+  height: 10px;
+  border: 0;
+  background: #337AB7;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3), 1px 1px 5px rgba(255, 255, 255, 1);
+}

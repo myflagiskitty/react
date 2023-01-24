@@ -5,12 +5,13 @@ export default function Checkbox(props) {
 
   return (
     <div>
+      <h3 className={styles.header}>{props.header}</h3>
 
       <label className={styles.custom_checkbox}>
         <input type="checkbox" name="checkbox" />
         <span className={styles.checkbox_span}></span>
       </label>
-      <span className={styles.labeltext}>{props.header1}</span>
+      <span className={styles.labeltext}>{props.check1}</span>
 
       <div className={styles.clear}></div>
 
@@ -18,7 +19,7 @@ export default function Checkbox(props) {
         <input type="checkbox" name="checkbox" />
         <span className={styles.checkbox_span}></span>
       </label>
-      <span className={styles.labeltext}>{props.header2}</span>
+      <span className={styles.labeltext}>{props.check2}</span>
 
       <div className={styles.clear}></div>
 
@@ -26,9 +27,9 @@ export default function Checkbox(props) {
         <input type="checkbox" name="checkbox" />
         <span className={styles.checkbox_span}></span>
       </label>
-      <span className={styles.labeltext}>{props.header3}</span>
+      <span className={styles.labeltext}>{props.check3}</span>
 
-      <div className={styles.y}></div>
+       
     </div>
   )
 };

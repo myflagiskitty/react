@@ -5,6 +5,8 @@ export default function InputDate(props) {
 
     return (
         <>
+            <h3 className={styles.header}>{props.header}</h3>
+            
             <input placeholder={props.placeholder}
                    type={props.type}
                    value={props.value}

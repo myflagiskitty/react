@@ -1,8 +1,8 @@
 .dropdown_btn {
     box-sizing: border-box;
-    width: 320px;
+    width: 266px;
     background: #FFFFFF;
-    border: 1px solid rgba(31, 32, 65, 0.5);
+    border: 1px solid rgba(31, 32, 65, 0.25);
     height: 44px;
     border-radius: 4px;
     font-family: 'Montserrat';
@@ -20,8 +20,10 @@
 }
 
 .string_clipping {
-    overflow: hidden;/* Обрезаем все, что не помещается в область */
-    text-overflow: ellipsis; /* Добавляем многоточие */
+    overflow: hidden;
+    /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis;
+    /* Добавляем многоточие */
     white-space: nowrap;
     width: 160px;
     height: 24px;
@@ -35,7 +37,7 @@
 
 .dropdown_btn_open {
     box-sizing: border-box;
-    width: 320px;
+    width: 266px;
     background: #FFFFFF;
     border: 1px solid rgba(31, 32, 65, 0.5);
     height: 44px;
@@ -55,7 +57,7 @@
 
 .dropdown_div {
     box-sizing: border-box;
-    width: 320px;
+    width: 266px;
     background: #FFFFFF;
     border: 1px solid rgba(31, 32, 65, 0.5);
     height: 119px;
@@ -73,13 +75,29 @@
 }
 
 .expand_more {
-    padding-right: 7px;
+    position: absolute;
+    width: 44px;
+    height: 44px; 
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(31, 32, 65, 0.5);
+    padding-left: 215px;
+}
+
+.expand_more:hover,
+.expand_more:focus {
+    color: rgba(31, 32, 65, 0.75);
 }
 
 .dropdown_row {
     display: flex;
     align-items: center;
-    padding: 7px 7px 0 0;
     justify-content: space-between;
 }
 
@@ -109,3 +127,5 @@
 .input_dropdown {
     padding: 21px 30px 25px;
 }
+
+

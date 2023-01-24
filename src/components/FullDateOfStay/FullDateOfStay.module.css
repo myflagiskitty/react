@@ -1,0 +1,65 @@
+.input_date:hover,
+.input_date:focus {
+  outline: none;
+  /*  без стандартной обводки */
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.input_date::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.input_date,
+.header {
+  font-family: 'Montserrat';
+  font-style: normal;
+}
+
+.input_date,
+.button {
+  height: 44px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.header {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #1F2041;
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+
+.input_date {
+  box-sizing: border-box;
+  width: 266px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.75);
+  padding: 13px 23px 13px 15px;
+}
+
+.button {
+  position: absolute;
+  width: 44px;
+  margin-left: 226px;
+  margin-top: -43px;
+  border: none;
+  background: inherit;
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.button:active,
+.button:hover,
+.button:focus {
+  color: rgba(31, 32, 65, 0.75);
+}
+

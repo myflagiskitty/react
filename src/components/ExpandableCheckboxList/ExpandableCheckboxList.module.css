@@ -1,8 +1,12 @@
-.clear {
-  clear: both;
+.dropdown_btn {
+  border: none;
+  position: relative;
+  background: #ffffff;
+  width: 260px;
 }
 
 .header {
+  position: absolute;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
@@ -10,12 +14,56 @@
   line-height: 15px;
   text-transform: uppercase;
   color: #1F2041;
-  padding: 0px 0px 5px 21px;
+}
+
+.expand_more {
+position: absolute;
+  top: -3px;
+  margin-left: 222px;
+  width: 44px;
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(31, 32, 65, 0.5);
+  justify-content: center;
+}
+
+.rotate_expand_more {
+  position: absolute;
+    top: -3px;
+    margin-left: 222px;
+    width: 44px;
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(31, 32, 65, 0.5);
+    justify-content: center;
+
+  transform: rotate(-180deg);
+}
+
+/* -------стили из checkbox-------- */
+.j{
+  padding-top: 25px;
+}
+
+.clear {
+  clear: both;
 }
 
 .labeltext {
   display: inline-block;
-  padding-top: 3px;
+  padding-top: 7px;
   padding-left: 10px;
   font-family: 'Montserrat';
   font-style: normal;
@@ -24,7 +72,7 @@
   line-height: 18px;
   color: rgba(31, 32, 65, 0.5);
 }
- 
+
 /* input показывает */
 .custom_checkbox input[type="checkbox"] {
   position: absolute;
@@ -34,12 +82,12 @@
 .custom_checkbox {
   cursor: pointer;
   display: inline-block;
-  padding-bottom: 5px;
+  padding: 5px 0 0 5px;
 }
 
 /* -серая рамка- */
 .checkbox_span {
-  display: inline-block; 
+  display: inline-block;
   transition: border 0.3s ease;
   border: 1px solid rgba(31, 32, 65, 0.25);
 }
@@ -50,7 +98,7 @@
 }
 
 .checkbox_span,
-.custom_checkbox input[type="checkbox"]:checked+.checkbox_span{
+.custom_checkbox input[type="checkbox"]:checked+.checkbox_span {
   width: 20px;
   height: 20px;
   background: #FFFFFF;
@@ -58,25 +106,25 @@
 }
 
 .custom_checkbox input[type="checkbox"]:checked+.checkbox_span:after,
-.custom_checkbox input[type="checkbox"]:checked+.checkbox_span:before{
+.custom_checkbox input[type="checkbox"]:checked+.checkbox_span:before {
   content: "";
   position: absolute;
   transform: rotate(45deg);
 }
+
 /* галочка */
-.custom_checkbox input[type="checkbox"]:checked+.checkbox_span:after{
+.custom_checkbox input[type="checkbox"]:checked+.checkbox_span:after {
   margin: 5px 0px 0px 7px;
   width: 6px;
   height: 8px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
+
 /* галочка */
-.custom_checkbox input[type="checkbox"]:checked+.checkbox_span:before{
+.custom_checkbox input[type="checkbox"]:checked+.checkbox_span:before {
   margin: 4px 0px 0px 8px;
   width: 4px;
   height: 6px;
   background: #ffffff;
   z-index: 1;
 }
-
-

@@ -8,7 +8,7 @@ export default function Radio(props) {
 
       <div className={styles.customRadio}>
         <label>
-          <input type="radio" name="radio" checked/>
+          <input type="radio" name="radio" checked onChange={() => { }} />
           <div className={styles.customRadio__label}>
             <span >{props.header1}</span>
           </div>
@@ -17,7 +17,7 @@ export default function Radio(props) {
 
       <div className={styles.customRadio}>
         <label>
-          <input type="radio" name="radio"/>
+          <input type="radio" name="radio" onChange={() => { }} />
           <div className={styles.customRadio__label} >
             <span >{props.header2}</span>
           </div>
