@@ -27,8 +27,7 @@
     z-index: -1;
   }
 
-  .buttonEmpty:hover{
-    opacity: 0.5;
-  }
-
- 
+ .buttonEmpty:hover:before,
+ .buttonEmpty:focus:before {
+   opacity: 0.5;
+ }

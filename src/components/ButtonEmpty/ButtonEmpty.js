@@ -5,6 +5,6 @@ export default function ButtonEmpty(props) {
 
     return <button className={styles.buttonEmpty}>{props.name}</button>
 };
-// при нажатии не правельно отображается
 
 
+ 

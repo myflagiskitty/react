@@ -25,10 +25,6 @@ export default function BoxCards() {
 
   }
 
-
-
-
-
   function showInputExit(event) {
     setExit(event.currentTarget.value);
   }
@@ -38,6 +34,8 @@ export default function BoxCards() {
     // исходя из кол-ва гостей подбирается из массива номер
   }
 
+
+  
   return (
     <div className={styles.box_cards}>
 
@@ -49,15 +47,15 @@ export default function BoxCards() {
           type='date'
           onInput={showInputArrival}
         />{/*при клике тип должен меняться type='number' */}
-       
+
         <InputArrivalAndDeparture
           header="выезд"
           type='date'
           onInput={showInputExit}
         />
       </form>
-      
-      <form><input type="date"/></form>
+
+      <form><input type="date" /></form>
 
       <div className={styles.fix}>
         <NewDropdown header="гости" />

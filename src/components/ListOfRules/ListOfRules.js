@@ -8,10 +8,13 @@ export default function ListOfRules(props) {
       <h3 className={styles.header}>{props.header}</h3>
 
       <ul className={styles.description}>
-        <li><span>{props.description1}</span></li>
-        <li><span>{props.description2}</span></li>
-        <li><span>{props.description3}</span></li>
+
+        {props.listRules.map((list, index) => {
+          return <li><span key="уникальный номер" >{list}</span></li>
+        })}
+
       </ul>
+   
     </div>
   )
 };

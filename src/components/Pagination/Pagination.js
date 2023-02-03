@@ -3,21 +3,11 @@ import styles from './pagination.module.css';
 
 export default function Pagination(props) {
     return (
-        <div>
+        <div className={styles.column}>
 
-            <div className={styles.row}>
-                <h3 className={styles.header}>{props.header}</h3>
-                
-            </div>
-
-            <div {...props} className={styles.slider}>
-                <div className={styles.r}></div>
-                <div className={styles.r}></div>
-                <div className={styles.r}></div>
-            </div>
-
-<span className={styles.range}>{props.range}</span>
+            тут 1  2  3 - 15 странички ➡️
+            <span className={styles.range}>{props.range}</span>
 
         </div>
     );
-};//потом доделаю
+};//потом доделаю по видео

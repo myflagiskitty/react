@@ -1,42 +1,40 @@
 .buttonFilledLonge {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    width: 26.63em;
-    height: 3.65em;
+    justify-content: center;
+    width: 320px;
+    height: 44px;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 2em;
+    border-radius: 22px;
     border: none;
+}
+
+.name {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 0.75rem;
+    font-size: 12px;
+    line-height: 15px;
     text-transform: uppercase;
     text-align: center;
-    color: #FFFFFF;
+    color: #FFFFFF
 }
+
 
 .iconArrow {
-    margin-left: 5.5em;
-    margin-right: 0.7em;
-}
-
-.buttonFilledRoundGreenArrow{            /* зеленый круг со стрелочкой */
+    width: 44px;
+    height: 44px;
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 3.3em;
-    height: 3.3em;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    border-radius: 2em;
-    border: none;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 0.75rem;
     text-align: center;
     color: #FFFFFF;
-}
-.button_filled_arrow{
-    padding: 0 30px;
+    border-radius: 22px;
+    justify-content: center;
+     position: absolute;
+     left: 300px;
 }

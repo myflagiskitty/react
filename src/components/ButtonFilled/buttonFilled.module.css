@@ -1,17 +1,20 @@
 .buttonFilled {
-    width: 8.24em;
-    height: 3.67em;
+    display: inline-block;
+
+    height: 44px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 0.75rem;
+    font-size: 12px;
     color: #FFFFFF;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 2em;
-    border:none;
+    border-radius: 22px;
+    border: none;
+    text-transform: uppercase;
+    padding: 0px 20px;
+
 }
 
-.buttonFilled:hover{
+.buttonFilled:hover {
     opacity: 0.5;
 }
-

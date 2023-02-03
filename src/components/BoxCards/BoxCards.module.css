@@ -7,22 +7,24 @@
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     position: relative;
+
+    padding: 40px 30px 30px 30px;
 }
 
-.box_row{
+/* .box_row{
     display: flex;
     flex-direction: row;
-    padding: 21px 30px 0;
+    /* padding: 21px 30px 0; 
     justify-content: space-between;
-}
+} */
 
-.fix_btn{
+/* .fix_btn{
     position: absolute;
     top: 300px;
     z-index: 0;
-}
+} */
 
-.fix{
+/* .fix{
     position: absolute;
     z-index: 5;
-}
+} */

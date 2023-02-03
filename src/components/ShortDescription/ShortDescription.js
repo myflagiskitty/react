@@ -16,8 +16,6 @@ export default function ShortDescription(props) {
         </div>
       </div>
 
-      
-
     </div>
   );
 };

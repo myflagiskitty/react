@@ -11,7 +11,7 @@ export default function NewDropdown(props) {
   const [count2, setChildren] = useState(0);//значение щетчика для детей   children
   const [count3, setBaby] = useState(0);//значение щетчика для младенцев       baby
 
-  function Сhange() {
+  function Change() {
     setValue(!value);//восклицание это отрицание - логический оператор не (так как не можем задать точно значение)
   }
 
@@ -35,7 +35,7 @@ export default function NewDropdown(props) {
     <div className={styles.input_dropdown}>
       <h3 className={styles.header}>{props.header}</h3>
 
-      <button onClick={Сhange} className={value ? styles.dropdown_btn_open : styles.dropdown_btn}>
+      <button onClick={Change} className={value ? styles.dropdown_btn_open : styles.dropdown_btn}>
         {sumGuests === 0 ? 'Сколько гостей' : sumGuests + " " + ChangeWordEndings(sumGuests)}
         <span className={styles.expand_more}>expand_more</span>
 
