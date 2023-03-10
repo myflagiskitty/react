@@ -31,14 +31,12 @@
   font-size: 14px;
   color: rgba(31, 32, 65, 0.75);
   padding: 13px 23px 13px 15px;
-  margin-right: 20px;
 }
 
 .button {
   position: absolute;
   width: 44px;
-  margin-left: 106px;
-  margin-top: -43px;
+  padding-left: 117px;
   border: none;
   background: inherit;
   font-family: 'Material Icons';
@@ -60,5 +58,4 @@
   font-size: 12px;
   line-height: 15px;
   color: #1F2041;
-  margin: 5px 0;
 }

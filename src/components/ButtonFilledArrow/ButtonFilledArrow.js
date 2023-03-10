@@ -10,6 +10,6 @@ export default function ButtonFilledArrow(props) {
         <span className={styles.name}>{props.name}</span>
         <span className={styles.iconArrow}>arrow_forward</span>
       </button>
-
+ 
   )
 }; 

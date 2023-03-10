@@ -11,51 +11,39 @@ export default function BoxCards() {
   const [exit, setExit] = useState();//выезд 
 
   function showInputArrival(event) {
-    setArrival(event.currentTarget.value); //вводим только число
-  }
-
-  if (typeof arrival === "string") {
-    console.log(`${arrival} это строка`);
-    if (isNaN(Number(arrival)) === false) {
-      console.log(`${Number(arrival)} а теперь число`);
-    }
-    else {
-      console.log(`${Number(arrival)} Not a Namber`);
-    }
-
+    alert(setArrival(event.target.value)); //вводим только число
   }
 
   function showInputExit(event) {
-    setExit(event.currentTarget.value);
+    setExit(event.target.value);
   }
-  // -------------------------------------------
 
   function PickUpNumbers() {
     // исходя из кол-ва гостей подбирается из массива номер
   }
 
-
-  
   return (
     <div className={styles.box_cards}>
-
-      <HeadersCards name="Найдём номера под ваши пожелания" />
+      
+      <div className={styles.header}>
+        <HeadersCards name="Найдём номера под ваши пожелания" />
+      </div>
 
       <form className={styles.box_row} >{/* onSubmit="функция для отправки формы" */}
         <InputArrivalAndDeparture
+          placeholder="ДД.ММ.ГГГГ"
           header="прибытие"
           type='date'
+          value={arrival}
           onInput={showInputArrival}
-        />{/*при клике тип должен меняться type='number' */}
-
+        />
         <InputArrivalAndDeparture
+          placeholder="ДД.ММ.ГГГГ"
           header="выезд"
           type='date'
           onInput={showInputExit}
         />
       </form>
-
-      <form><input type="date" /></form>
 
       <div className={styles.fix}>
         <NewDropdown header="гости" />
@@ -66,7 +54,8 @@ export default function BoxCards() {
           pickUpNumbers={PickUpNumbers} />
       </div>
 
-
     </div>
   );
 };
+// c input тут беда, значение undefaind при проверке, кнопка не выводить "фэйковый календарик"
+// и значение из даты никуда не уходит и многое другое...функциоонала нет

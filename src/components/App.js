@@ -28,44 +28,8 @@ import Features from "./Features/Features"
 import ListOfRules from "./ListOfRules/ListOfRules"
 import UserReviews from "./UserReviews/UserReviews"
 import RangeSlider from "./RangeSlider/RangeSlider"
-
-
-
-
-
-function getA(aCount, aBigCount) {
-  if (aCount < 0)
-    aCount = 0;
-
-  if (aBigCount < 0)
-    aBigCount = 0;
-
-  if (aCount < aBigCount)
-    aBigCount = aCount;
-
-  if (aCount === 0)
-    return [];
-
-  const arr = [];
-
-  for (let i = 0; i < aCount; i++) {
-    if (i < aBigCount)
-      arr.push("A");
-    else
-      arr.push("а");
-  }
-
-  return arr;
-}
-console.log(getA(10, 5));                     // [A, A, A, A, A, a, a, a, a, a]
-console.log(getA(3, 1));                     // [A, a, a]
-console.log(getA(6, 4));                // [A, A, A, A, a, a]
-console.log(getA(3, 4));               // [A, A, A]
-console.log(getA(6, -1));           // [a, a, a, a, a, a]
-console.log(getA(-4, -1));             // []
-
-//------------------------------------------------------------------
-
+import RegistrationCard from "./RegistrationCard/RegistrationCard"
+import LogIn from "./LogIn/LogIn"
 
 export default function App() {
 
@@ -73,15 +37,20 @@ export default function App() {
 
   return (
     <>
-     
-      <ListOfRules listRules={listRules} header="Правила"/>
+      {/* string.toUpperCase();//ввести там где должно быть с большой буквы✅*/}
+      {/* <ListOfRules listRules={listRules} header="Правила"/>
+      <StarRating aCount={6} aBigCount={3}/> */}
+      {/* <Subscription placeholder="Email" /> */}
 
-    <StarRating aCount={6} aBigCount={3}/>
 
-     
       {/* =======================карточки=========================== */}
+      
+      
+      <BoxCards />
+      {/*  */}
+      {/* <RegistrationCard /> */}
+      {/* <LogIn/> */}
 
-      {/*  <BoxCards /> */}
       {/*<RoomCard /> - пустое значение
       <Calendar /> - заглушка*/}
 
@@ -105,7 +74,7 @@ export default function App() {
       </div> */}
 
       {/* <FullDateOfStay placeholder="19 авг - 23 авг" header="Даты пребывания в отеле" type="text" />
-      <Subscription placeholder="Email" />================этот🔴
+      
       <DropdownWithouBtn header="удобства номера" />
 
       <ExpandableCheckboxList header="дополнительные удобства"
@@ -164,6 +133,7 @@ export default function App() {
         <ButtonClearOrApply name="применить/очистить" />
         <ButtonFilledArrow name="перейти к оплате" />
         <Pagination range="1 – 12 из 100+ вариантов аренды" /> */}
+
 
     </>
   );

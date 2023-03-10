@@ -1,30 +1,31 @@
 .box_cards {
-    box-sizing: border-box;
-    width: 380px;
-    height: 374px;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    position: relative;
-
-    padding: 40px 30px 30px 30px;
+  box-sizing: border-box;
+  width: 380px;
+  height: 374px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: relative;
+  padding: 40px 30px 30px 30px;
 }
 
-/* .box_row{
-    display: flex;
-    flex-direction: row;
-    /* padding: 21px 30px 0; 
-    justify-content: space-between;
-} */
+.header{
+ margin-bottom: 20px;
+}
 
-/* .fix_btn{
-    position: absolute;
-    top: 300px;
-    z-index: 0;
-} */
+.box_row {
+  display: flex;
+  flex-direction: row;
+}
 
-/* .fix{
-    position: absolute;
-    z-index: 5;
-} */
+.fix {
+  position: absolute;
+  z-index: 1;
+}
+
+.fix_btn {
+  position: absolute;
+  top: 275px;
+  z-index: 0;
+}

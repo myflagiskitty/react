@@ -1,6 +1,5 @@
 label {
   float: left;/* элемент должен плавать слева от содержащего его блока */
-  padding-left: 20px;
 }
 
 .customRadio [type="radio"]:checked,
@@ -66,4 +65,8 @@ label {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
+}
+
+.spane{
+  margin-right: 20px;
 }
