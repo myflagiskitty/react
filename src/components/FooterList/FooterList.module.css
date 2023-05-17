@@ -1,0 +1,19 @@
+.footer_label {
+  color: #1F2041;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* должно быть в % */
+  margin: 0 0 20px 0;
+
+}
+
+.menu_footer_item:not(:last-child) {
+  margin: 0 0 10px 0;
+}
+
+.menu_footer_link {
+  color: rgba(31, 32, 65, 0.5);
+  line-height: 17px;
+}

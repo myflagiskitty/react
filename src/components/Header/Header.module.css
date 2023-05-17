@@ -1,0 +1,215 @@
+.box {
+  height: 70px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1160px;
+}
+
+/* как сделать адаптивное изображение */
+.img {
+  max-height: 100%;
+}
+
+.btn_box {
+  display: flex;
+  /* justify-content: space-around; */
+  justify-content: flex-end;
+  width: 770px;
+  /* background: #87d563; */
+}
+
+.link {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(31, 32, 65, 0.5);
+  text-transform: capitalize;
+  border: none;
+  background-color: inherit;
+  padding: 0;
+  /* слова на одной строке */
+  white-space: nowrap;
+}
+
+.link:hover,
+.link:focus {
+  font-weight: 700;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.loginOrName {
+  display: flex;
+  justify-content: space-between;
+  width: 303px;
+  align-items: center;
+}
+
+.btnEmpty {
+  /* background: #63a7d5; */
+  width: 87px;
+}
+
+.btnFilled {
+  /* background: #d5ad63; */
+  width: 196px;
+}
+
+.padding,
+.link {
+  padding: 0 10px;
+}
+
+/* ===========================================по видео=============================== */
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+
+.header_conteiner {
+  display: flex;
+  min-height: 70px;
+  align-items: center;
+}
+
+@media (max-width: 479px) {
+  /* уменьшить размер шапки, только у меня это не сработает так как элементы крупные, но если сделаю бургер меню то все гууд */
+  .header_conteiner {
+    min-height: 50px;
+
+  }
+}
+
+.header__logo {
+  width: 106px;
+  height: 40px;
+}
+
+.header__menu {
+  /* совместить в один клас с menu */
+  margin: 0px 0px 0px 285px;
+  /* padding: 5px 0;отступы беззопастности чтоб при сильном сужении или при большом контенте строки не прилипали к шапочке */
+  
+}
+
+/* адаптив на планшетом размере */
+@media (max-width: 992px) {
+  .header__menu {
+    margin: 0px 0px 0px 80px;
+  }
+}
+
+/* адаптив на телефоный размере */
+@media (max-width: 767px) {
+  .header__menu {
+    margin: 0px 0px 0px 40px;
+  }
+}
+
+@media (max-width: 479px) {
+  .header__menu {
+    margin: 0px 0px 0px 20px;
+  }
+}
+
+.menu__list {
+  display: flex;
+  /* от жескости чтобы ссылки шли в колону при сужении */
+  flex-wrap: wrap;
+  align-items: center;
+  
+}
+
+.menu__item {
+  /* начинается с большой буквы */
+  text-transform: capitalize;
+  /* у последнего не будет отступа */
+      margin-bottom: 0px;
+}
+
+.menu__item:not(:last-child) {
+  /* делаем отступ у всех кроме последнего элемента */
+  margin: 0px 20px 0px 0px;
+}
+
+.menu__link {
+  color: rgba(31, 32, 65, 0.5);
+  /*растояние между строк надо подщитать в процентах 17px/font-size: 14px*100=121%     */
+  line-height: calc(17 / 14 * 100%);
+  
+}
+
+.menu__link:hover,
+.menu__link:focus {
+  font-weight: 700;
+}
+
+@media (max-width: 479px) {
+  /* когда сильно маленький экран увеличиваем шрифт или делаем бургер меню */
+  .menu__link {
+    font-size: 18px;
+  }
+}
+/* =======================бургер меню======================== */
+.input, [for=burger]{
+   display: none; /*на большом экране они не видны*/
+}
+
+/* адаптив на планшетом размере */
+@media (max-width: 992px) {}
+
+/* адаптив на телефоный размере */
+@media (max-width: 767px) {}
+
+@media (max-width: 479px) {
+  [for=burger] {
+    /*когда маленький экран появляется три полосы*/
+      display: block;
+      /* его местонахождениее */
+      position: fixed;
+      width: 30px;
+      text-align: center;
+      right: 20px;
+      top: 10px;
+    }
+        [for=burger]::before{
+          content: '=';
+        }
+
+    .header__menu{
+      /* когда маленький экран nav списка нет */
+      display: none;
+      /* чтобы  cкролить значек меню совместно со списком*/
+      position: fixed;
+      top: 0;
+      margin-top: 30px;
+      background: #c0909053;
+      width: 80%;
+    }
+
+    /* если у  input есть псевдокласс checked и сосед label и сосед nav  и между этими элементами нет ничего другого*/
+.input:checked + label + nav{
+display: block;
+}
+
+.input:checked + [for=burger]::before {
+  content: 'x';
+}
+}
+/* ============================== */
+.edge{
+  width: 1px;
+  height: 30px;
+  background: rgba(31, 32, 65, 0.1);/*   */
+  /* border: 1px solid red;  */
+  
+}

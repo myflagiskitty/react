@@ -1,0 +1,72 @@
+.page {}
+
+.page__main_block {}
+
+.main_block {
+  position: relative;
+}
+
+.main_block__container {}
+
+
+
+.main_block__body {
+  /* не мои параметры */
+  padding: 201px 0px 79px 0px;
+  /* чтобы картинка не перекрывала контент */
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+}
+
+/* 
+overflow-wrap со значениями: break-word 
+
+word-break со значениями: keep-all,break-all 
+line-break со значениями: loose,normal,strict 
+hyphens со значениями: none,auto */
+
+.main_block__tex {
+  /* overflow-wrap:break-word; */
+  /* word-wrap : break-word ; */
+}
+
+.main_block__card {}
+
+.main_block__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* ==================================технические классы так же как и ._container======================================*/
+._container {
+  /* ограничивающий контейнер  */
+  max-width: 1160px;
+  /* выставляем блок по центру */
+  margin: 0px auto;
+  /* для того штобы контент не прилипал при сужении cтавим padding и box-sizing: content-box; */
+  padding: 0px 15px;
+  box-sizing: content-box;
+  
+}
+
+._ibg {
+  /* position: relative; с ним у меня нет картинки  */
+}
+
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* картинка маштабируется под любой размер */
+  object-fit: cover;
+}

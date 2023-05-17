@@ -1,4 +1,4 @@
-import React from "react";
+
 import BoxCards from "./BoxCards/BoxCards"
 import Calendar from "./Calendar/Calendar"
 import StarRating from "./StarRating/StarRating"
@@ -30,36 +30,70 @@ import UserReviews from "./UserReviews/UserReviews"
 import RangeSlider from "./RangeSlider/RangeSlider"
 import RegistrationCard from "./RegistrationCard/RegistrationCard"
 import LogIn from "./LogIn/LogIn"
+import Conteiner from "./Conteiner/Conteiner"
+import LinkDropdown from "./LinkDropdown/LinkDropdown"
+import Main from "./Main/Main"
+import Footer from "./Footer/Footer"
+// ================================================
+import React, {useState, useEffect} from "react";
+import styles from './App.module.css';
+import Header from "./Header/Header"
+import Navbar from "./Navbar/Navbar"
+import Registration from "./Registration/Registration"
+import SignIn from "./SignIn/SignIn"
+// import {BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// =======================================
 
-export default function App() {
+export default function App(props) {
+  // const [apartments, setApartments] = useState([]);//храняться все апартаменты
+  // const [loading, setLoading] = useState(false);
+  // const [currentPage, setCurrentPage] = useState(1);// состояние для текущей страницы которую необходимо отображать
+  // const [apartmentsPerPage] = useState(12);// колличество элементов которые будем показывать на одной странице
 
   const listRules = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00",];//список правил
 
   return (
-    <>
-      {/* string.toUpperCase();//ввести там где должно быть с большой буквы✅*/}
-      {/* <ListOfRules listRules={listRules} header="Правила"/>
-      <StarRating aCount={6} aBigCount={3}/> */}
-      {/* <Subscription placeholder="Email" /> */}
+    <BrowserRouter>{/* обрамляем все приложение этим тегом для  того чтобы работали теги Route*/}
+      <div className={styles.wrapper}>
+        <Header />
+        <Pagination/>
+        <Navbar />{/* вместо  Navbar сделать отклик на компонент регистрации и входа, так вообще можно?*/}
+        <Footer />
+
+        <div className={styles.w}>
+          <Routes>
+            <Route path="/registration" element={<Registration />} />{/* специальная компонента от реакта которая позволяет сделать маршрут */}
+            <Route path="/signIn" element={<SignIn />} />
+          </Routes>{/* роут отрисует каждую компоненту когда будет нужно */}
+        </div>
 
 
-      {/* =======================карточки=========================== */}
-      
-      
-      <BoxCards />
-      {/*  */}
-      {/* <RegistrationCard /> */}
-      {/* <LogIn/> */}
+        {/* CSS попытка сделать одну страницу 📍*/}
+        {/*<Header/> заголовок внутри есть компонент  <Conteiner/>*/}
+        {/*<Main/> контент */}
+        {/*<Footer/> подвал */}
 
-      {/*<RoomCard /> - пустое значение
-      <Calendar /> - заглушка*/}
+        {/* ================================================================== */}
+       
+        {/* <ListOfRules listRules={listRules} header="Правила"/>
+         <StarRating aCount={6} aBigCount={3}/> */}
+        {/*  */}
+
+        {/* =======================карточки=========================== */}
+
+        {/*  <RegistrationCard /> */}
+        {/*  <LogIn/> */}
+        {/* <BoxCards /> */}
+        {/* <RoomCard />- пустое значение
+       <Calendar />- заглушка*/}
 
 
-      {/* <Dropdown /> - такой же элемент как NewDropdown, только не работает кнопка применить:( не знаю есть он гдето в проекте поэтому не удаляю */}
+        {/* <Dropdown /> - такой же элемент как NewDropdown, только не работает кнопка применить:( не знаю есть он гдето в проекте поэтому не удаляю */}
 
 
-      {/* ======================= 1 первая колонка ================================*/}
-      {/* <Counter />
+        {/* ======================= 1 первая колонка ================================*/}
+        {/* <Counter />
       <HeadersCards name="Заголовок" />
       <Input placeholder="Email" type="email" header="Данные для входа в сервис" />
       <Input placeholder="Парль" type="password" />
@@ -73,7 +107,7 @@ export default function App() {
         <InputArrivalAndDeparture placeholder="ДД.ММ.ГГГГ" type="date" header="выезд" />
       </div> */}
 
-      {/* <FullDateOfStay placeholder="19 авг - 23 авг" header="Даты пребывания в отеле" type="text" />
+        {/* <FullDateOfStay placeholder="19 авг - 23 авг" header="Даты пребывания в отеле" type="text" />
       
       <DropdownWithouBtn header="удобства номера" />
 
@@ -99,8 +133,8 @@ export default function App() {
 
         <ShortDescription picture="whatshot" title="Уют" description="Номер оснащён камином" />
       </div> */}
-      {/* ===============================================================================средняя колонка ====================================================================================*/}
-      {/* <Checkbox header="Правила дома"
+        {/* ===============================================================================средняя колонка ====================================================================================*/}
+        {/* <Checkbox header="Правила дома"
         check1="Можно курить"
         check2="Можно с питомцами"
         check3="Можно пригласить гостей (до 10 человек)" />
@@ -126,15 +160,16 @@ export default function App() {
           alt="user's photo"
           feedback="Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент" />
       </div>  */}
-      {/* ============================================================================третья колонка ================================================================================*/}
-      {/* <RangeSlider header="диапазон цены" range="5 000₽ - 10 000₽" clarification="Стоимость за сутки пребывания в номере" />
+        {/* ============================================================================третья колонка ================================================================================*/}
+        {/* <RangeSlider header="диапазон цены" range="5 000₽ - 10 000₽" clarification="Стоимость за сутки пребывания в номере" />
         <ButtonFilled name="CLICK ME" />
-        <ButtonEmpty name="CLICK ME" />
+        <ButtonEmpty name="CLICK ME" /> 
         <ButtonClearOrApply name="применить/очистить" />
         <ButtonFilledArrow name="перейти к оплате" />
         <Pagination range="1 – 12 из 100+ вариантов аренды" /> */}
 
 
-    </>
+      </div>
+    </BrowserRouter>
   );
 };

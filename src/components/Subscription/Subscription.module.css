@@ -1,7 +1,7 @@
 .input {
   /* ширина экрана 1280 */
   box-sizing: border-box;
-  width: 320px;
+  width: 260px;
   height: 44px;
   background: #FFFFFF;
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -53,7 +53,7 @@
 
   justify-content: center;
   border: none;
-  margin-left: 276px;
+  margin-left: 216px;
   top: 0px;
 }
 

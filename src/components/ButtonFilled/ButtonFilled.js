@@ -3,12 +3,8 @@ import styles from './buttonFilled.module.css';
 
 export default function ButtonFilled(props) {
 
-    return (
-        <>
+    return ( 
     <button className={styles.buttonFilled}> <span>{props.name}</span></button>
-   
-    
-    </>
     );
    
  
